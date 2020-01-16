@@ -14,22 +14,8 @@ mkdir code
 Clone the repo:
 ```
 cd ~/code
-git clone https://github.com/JVerwolf/320_project.git
+git clone https://github.com/imagineer6/ScalableDayTrader_SENG468.git
 
-```
-
-To make a virtualenv with python3:
-```
-cd ~/code/320_project
-pip install virtualenvwrapper
-mkvirtualenv --python=/usr/bin/python3 320_project
-```
-
-To install the dependencies:
-```
-# From within the app root directory:
-workon 320_project
-pip install -r requirements.txt
 ```
 
 #### Git Workflow:
@@ -112,50 +98,7 @@ resetting, force pushing, etc.).  However, you should NEVER change history on
 (Unless you _really_ know what you are doing and have the author's permission).
 
 
-
 ## Appendix:
-
-#### Virtualenv:
-The virtualenv is used to install requirements in a local scope.
-Without the virtualenv, pip would have to install the requirements 
-globally.  This could lead to dependency conflicts and namespace 
-pollution.  The virtualenv lives at this filepath on your machine 
-(this is where pip installs
-libraries):
-`~/.virtualenvs/320_project`
-
-The virtualenv must be activated in order for python to know how to
-find the libraries in it's `import` statements, and in order for pip
-to install the dependencies in the right location.  (This is effectively 
-done with symlink magic).
-
-```
-# To activate the virtual env:
-workon 320_project
-
-# To deactivate the virtual env:
-deactivate 320_project
-
-# To delete the virtualenv, and all deps installed inside:
-rmvirtualenv 320_project
-```
-
-
-#### Installing a New Dependency
-
-```
-# Ensure the virtual env is activated:
-workon 320_project
-
-pip install my-new-dep
-```
-
-Then add the dependency to the `requirements.txt` file:
-```
-pip freeze >> requirements.txt
-```
-Then rearrange the dep to be in alphabetical order in 
-the `requirements.txt` file.
 
 #### Other useful git commands:
 ```
